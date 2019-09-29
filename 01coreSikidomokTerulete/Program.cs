@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _01coreSikidomokTerulete
 {
@@ -25,6 +27,20 @@ namespace _01coreSikidomokTerulete
 
             Console.WriteLine($"The areas: {areasum}");
 
+            var planes = new List<IPlane>();
+
+            planes.Add(square);
+            planes.Add(circle);
+            planes.Add(triangle);
+
+            //var sum = 0;
+            //foreach (var plane in planes)
+            //{
+            //    sum += plane.Area();
+            //}
+                       
+            //Console.WriteLine($"The areas (new type): {sum}");
+            Console.WriteLine($"The areas (new type): {planes.Sum(x => x.Area())}");
             Console.ReadLine();
         }
     }
