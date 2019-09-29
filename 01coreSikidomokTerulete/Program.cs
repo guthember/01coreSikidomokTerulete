@@ -15,6 +15,16 @@ namespace _01coreSikidomokTerulete
             var triangle = new Triangle(trianglebase: 6, height: 4);
             Console.WriteLine($"A triangle area: {triangle.Area()}");
 
+            // területek összeadása
+
+            var areasum = square.Area();
+
+            areasum += circle.Area();
+
+            areasum += triangle.Area();
+
+            Console.WriteLine($"The areas: {areasum}");
+
             Console.ReadLine();
         }
     }
